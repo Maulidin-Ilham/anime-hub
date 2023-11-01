@@ -7,14 +7,22 @@ const TopAnime = async () => {
 
   return (
     <>
-      <div className="flex flex-row space-x-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-7">
         {topAnime.map((anime) => (
-          <div key={anime.mal_id} className="w-full h-full border shadow-md ">
+          <div
+            key={anime.mal_id}
+            className="relative w-full h-full cursor-pointer hover:scale-95 transition-all duration-300"
+          >
             <img
               src={anime.images.webp.large_image_url}
               alt={anime.title}
               className="object-cover w-full h-full"
             />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-90 transition-opacity bg-gradient-to-r  from-black">
+              <span className="text-white font-medium md:font-semibold lg:font-bold text-lg md:text-xl lg:text-2xl px-2 rounded">
+                {anime.title}
+              </span>
+            </div>
           </div>
         ))}
       </div>
