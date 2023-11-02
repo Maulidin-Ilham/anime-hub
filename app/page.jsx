@@ -13,7 +13,7 @@ const page = async () => {
   return (
     <div className="p-4 flex flex-col  ">
       <Hero anime={anime} />
-      <div className="mt-5 mb-3 text-xl md:text-2xl lg:text-3xl font-bold">
+      <div className="mt-6 mb-3 text-xl md:text-2xl lg:text-3xl font-bold">
         Top Anime
       </div>
       <TopAnime />
