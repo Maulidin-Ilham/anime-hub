@@ -43,15 +43,21 @@ const page = async ({ params }) => {
           </div>
         </div>
         {/* video */}
-        <div className="mt-6">
-          <h1 className="text-lg font-semibold">Trailer</h1>
+        <div className="mt-6 w-full ">
+          <h1 className="text-lg font-semibold mb-2">Trailer</h1>
           {details.trailer.youtube_id !== null ? (
             <YouTube
               videoId={details.trailer.youtube_id}
-              className="w-full h-full object-cover"
+              opts={{
+                width: "100%",
+                height: "500",
+                playerVars: {
+                  autoplay: 1,
+                },
+              }}
             />
           ) : (
-            <h1>Video tidak tersedia</h1>
+            <h1 className="mt-2 font-semibold">Video is not available</h1>
           )}
         </div>
       </div>
