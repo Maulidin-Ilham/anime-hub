@@ -7,7 +7,7 @@ import AnimeSynopsis from "./AnimeSynopsis";
 const Hero = ({ anime }) => {
   return (
     <>
-      <div className="w-full border-2 border-gray-200  h-[300px] md:h-[400px] lg:h-[470px] relative">
+      <div className="w-full border-[1px] border-gray-500  h-[300px] md:h-[400px] lg:h-[470px] relative">
         <div className="w-full h-full ">
           <HeroImage anime={anime} />
         </div>
